@@ -5,7 +5,8 @@ namespace FirtsRazorApp.Controllers
 {
     public class ProductController : Controller
     {
-        private static Product _product = new();
+        private static ProductModel _product = new();
+
         [HttpGet]
         public IActionResult Products()
         {
@@ -15,7 +16,7 @@ namespace FirtsRazorApp.Controllers
         [HttpPost]
         public IActionResult Products(Product model)
         {
-            _product.Id.Add(model);
+            _product.ProductsList.Add(model);
             return View(_product);
         }
     }
