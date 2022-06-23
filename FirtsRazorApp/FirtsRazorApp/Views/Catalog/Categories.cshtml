@@ -1,12 +1,7 @@
-﻿@model Catalog
+﻿@model Product
 
 @{
-    ViewData["Title"] = "Список категорий";
-}
-
-@foreach (var cat in Model.ProductList)
-{
-    <div>@cat.Id @cat.Name</div>
+    ViewData["Title"] = "Список товаров";
 }
 
 <form method="post">
@@ -14,5 +9,7 @@
     <br/>
     Имя: <input type="text" name="name" />
     <br/>
-    <input type="submit" name="submit" value="Создать" />
+    Фото: <input type="image" name="image" />
+    <br/>
+    <input type="submit" name="submit" value="Добавить" />
 </form>

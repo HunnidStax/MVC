@@ -1,15 +1,18 @@
-﻿@model Product
-
-@{
-    ViewData["Title"] = "Список товаров";
+﻿@{
+    ViewData["Title"] = "Catalog list";
 }
 
-<form method="post">
-    Id: <input type="text" name="id" required />
-    <br/>
-    Имя: <input type="text" name="name" />
-    <br/>
-    Фото: <input type="image" name="image" />
-    <br/>
-    <input type="submit" name="submit" value="Добавить" />
-</form>
+<div>
+    <h1>Catalog list</h1>
+    <hr>
+    @{
+        Catalog catalog = (Catalog)@ViewData["Catalog"];
+        if (catalog != null && catalog?.ProductList != null)
+        {
+            @foreach (var item in catalog.ProductList)
+            {
+                <div>Id: @item.Id; Name: @item.Name; <img src="@item.Img" alt="prod picture" width="100"/></div>
+            }
+        }
+    }
+</div>

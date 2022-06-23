@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace FirtsRazorApp.Models
+﻿namespace FirtsRazorApp.Models
 {
     public class Product
     {
