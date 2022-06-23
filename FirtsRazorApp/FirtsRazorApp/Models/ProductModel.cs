@@ -2,11 +2,6 @@
 
 namespace FirtsRazorApp.Models
 {
-    public class ProductModel
-    {
-        public List<Product> ProductsList { get; set; } = new();
-    }
-
     public class Product
     {
         public int Id { get; set; }

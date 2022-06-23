@@ -2,14 +2,13 @@
 
 namespace FirtsRazorApp.Models
 {
-    public class CatalogModel
+    public class Catalog
     {
-        public List<Category> Categories { get; set; } = new();
-    }
+        public Catalog()
+        {
+            ProductList = new List<Product>();
+        }
 
-    public class Category
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public List<Product> ProductList { get; set; }
     }
 }

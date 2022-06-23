@@ -1,12 +1,7 @@
-﻿@model ProductModel
+﻿@model Product
 
 @{
     ViewData["Title"] = "Список товаров";
-}
-
-@foreach (var cat in Model.ProductsList)
-{
-    <div>@cat.Id @cat.Name</div>
 }
 
 <form method="post">

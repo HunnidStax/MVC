@@ -5,19 +5,30 @@ namespace FirtsRazorApp.Controllers
 {
     public class CatalogController : Controller
     {
-        private static CatalogModel _catalog = new();
+        private readonly Catalog _catalog;
+        public CatalogController(Catalog catalog)
+        {
+            _catalog = catalog;
+        }
 
         [HttpGet]
-        public IActionResult Categories()
+        public IActionResult Index()
         {
-            return View(_catalog);
+            ViewData["Catalog"] = _catalog;
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ProductOnCreat()
+        {
+            return View();
         }
 
         [HttpPost]
-        public IActionResult Categories(Category model)
+        public IActionResult ProductOnCreat([FromForm] Product product)
         {
-            _catalog.Categories.Add(model);
-            return View(_catalog);
+            _catalog.ProductList.Add(product);
+            return View();
         }
     }
 }
