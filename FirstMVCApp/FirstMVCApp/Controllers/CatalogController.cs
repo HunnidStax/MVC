@@ -28,7 +28,18 @@ namespace FirstMVCApp.Controllers
         [HttpPost]
         public IActionResult ProductOnCreate([FromForm] Product product)
         {
-            _catalog.ProductsList.Add(product);
+            _catalog.AddProduct(product);
+            return View();
+        }
+        [HttpGet]
+        public IActionResult ProductDeletion()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ProductDeletion([FromForm] Product product)
+        {
+            _catalog.RemoveProduct(product.Id);
             return View();
         }
     }

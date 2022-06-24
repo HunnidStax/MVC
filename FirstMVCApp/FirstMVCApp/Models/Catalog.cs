@@ -1,29 +1,41 @@
-﻿namespace FirstMVCApp.Models
+﻿using System.Collections.Concurrent;
+
+namespace FirstMVCApp.Models
 {
     public class Catalog : ICatalog
     {
         private object syncObj = new();
+        private long index;
         public Catalog()
         {
-            ProductsList = new List<Product>();
+            index = 0;
+            ProductsList = new ConcurrentDictionary<long, Product>();
         }
 
-        public List<Product> ProductsList { get; set; }
+        public ConcurrentDictionary<long, Product> ProductsList { get; set; }
 
         public void AddProduct(Product product)
         {
-            lock (syncObj)
+            var currentIndex = Interlocked.Increment(ref index);
+            ProductsList.AddOrUpdate(product.Id, product, (ind, old) => product);
+        }
+
+        public void RemoveProduct(int id)
+        {
+            var productToRemove = ProductsList.Where(x => x.Value.Id == id);
+            foreach (var item in productToRemove)
             {
-                ProductsList.Add(product);
+                ProductsList.TryRemove(item.Key, out _);
             }
         }
 
-        public IReadOnlyList<Product> Get()
+        public Product? Get(long index)
         {
-            lock (syncObj)
-            {
-                return ProductsList.AsReadOnly();
-            }
+            ProductsList.TryGetValue(index, out Product? product);
+            return product;
         }
+
+        public IReadOnlyList<Product> Get()
+            => ProductsList.Values.ToList().AsReadOnly();
     }
 }
