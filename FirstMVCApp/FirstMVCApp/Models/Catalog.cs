@@ -1,10 +1,11 @@
-﻿using System.Collections.Concurrent;
+﻿using FirstMVCApp.Models.MailServ;
+using FirstMVCApp.Services;
+using System.Collections.Concurrent;
 
 namespace FirstMVCApp.Models
 {
     public class Catalog : ICatalog
     {
-        private object syncObj = new();
         private long index;
         public Catalog()
         {
@@ -14,10 +15,12 @@ namespace FirstMVCApp.Models
 
         public ConcurrentDictionary<long, Product> ProductsList { get; set; }
 
-        public void AddProduct(Product product)
+        public long GetNewIndex()
+            => Interlocked.Increment(ref index);
+
+        public void AddProduct(Product product, long index)
         {
-            var currentIndex = Interlocked.Increment(ref index);
-            ProductsList.AddOrUpdate(product.Id, product, (ind, old) => product);
+            ProductsList.TryAdd(index, product);
         }
 
         public void RemoveProduct(int id)
@@ -35,7 +38,7 @@ namespace FirstMVCApp.Models
             return product;
         }
 
-        public IReadOnlyList<Product> Get()
+        public IReadOnlyList<Product> GetList()
             => ProductsList.Values.ToList().AsReadOnly();
     }
 }

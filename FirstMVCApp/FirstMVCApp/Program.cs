@@ -1,11 +1,13 @@
 using FirstMVCApp.Models;
+using FirstMVCApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<Catalog>();
-
+builder.Services.AddSingleton<ICatalog, Catalog>();
+builder.Services.AddScoped<ISendMailService, SendMailService>();
+builder.Services.AddScoped<ICatalogManager, CatalogManager>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

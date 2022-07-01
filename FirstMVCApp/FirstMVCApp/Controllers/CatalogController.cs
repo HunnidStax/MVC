@@ -1,34 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FirstMVCApp.Models;
+using FirstMVCApp.Services;
 
 namespace FirstMVCApp.Controllers
 {
     public class CatalogController : Controller
     {
-        private readonly Catalog _catalog;
+        private readonly ICatalogManager _catalogManager;
 
-        public CatalogController(Catalog catalog)
+        public CatalogController(ICatalogManager catalogManager)
         {
-            _catalog = catalog;
+            _catalogManager = catalogManager;
         }
-
         [HttpGet]
         public IActionResult Index()
         {
-            ViewData["Catalog"] = _catalog;
+            ViewData["Catalog"] = _catalogManager;
             return View();
         }
 
         [HttpGet]
-        public IActionResult ProductOnCreate()
+        public IActionResult ProductOnCreating()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult ProductOnCreate([FromForm] Product product)
+        public IActionResult ProductOnCreating([FromForm] Product product)
         {
-            _catalog.AddProduct(product);
+            _catalogManager.Create(product);
             return View();
         }
         [HttpGet]
@@ -39,7 +39,7 @@ namespace FirstMVCApp.Controllers
         [HttpPost]
         public IActionResult ProductDeletion([FromForm] Product product)
         {
-            _catalog.RemoveProduct(product.Id);
+            _catalogManager.Delete(product.Id);
             return View();
         }
     }
