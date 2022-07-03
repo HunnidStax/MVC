@@ -15,18 +15,18 @@ namespace FirstMVCApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewData["Catalog"] = _catalogManager;
+            ViewData["Catalog"] = _catalogManager.GetList();
             return View();
         }
 
         [HttpGet]
-        public IActionResult ProductOnCreating()
+        public IActionResult ProductOnCreate()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult ProductOnCreating([FromForm] Product product)
+        public IActionResult ProductOnCreate([FromForm] Product product)
         {
             _catalogManager.Create(product);
             return View();
