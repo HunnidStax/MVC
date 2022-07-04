@@ -7,18 +7,22 @@ namespace FirstMVCApp.Services
     {
         private readonly ICatalog _catalog;
         private readonly ISendMailService _mailService;
+        private readonly ILogger _logger;
 
         public CatalogManager(ICatalog catalog,
-            ISendMailService mailService)
+            ISendMailService mailService,
+            ILogger<CatalogManager> logger)
         {
             _catalog = catalog;
             _mailService = mailService;
+            _logger = logger;
         }
         public void Create(Product product)
         {
             var currentIndex = _catalog.GetNewIndex();
             _catalog.AddProduct(product, currentIndex);
-            _mailService.Send(GetMailFields());
+            _logger.LogInformation("Was added: {name}", product.Name ?? "");
+            _mailService.Send("Notification", "Added new product");
         }
 
         public Product? Get(long index)
@@ -29,17 +33,5 @@ namespace FirstMVCApp.Services
 
         public void Delete(int id)
             => _catalog.RemoveProduct(id);
-
-        private MailFields GetMailFields()
-        {
-            return new MailFields(
-                from: "asp2022gb@rodion-m.ru",
-                password: "3drtLSa1",
-                to: "bigsosaHunnidStax@yandex.ru",
-                subject: "Notification",
-                body: "New goods added",
-                host: "smtp.beget.com",
-                port: 25);
-        }
     }
 }

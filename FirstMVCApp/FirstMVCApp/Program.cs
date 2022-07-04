@@ -1,5 +1,7 @@
 using FirstMVCApp.Models;
+using FirstMVCApp.Models.MailServ;
 using FirstMVCApp.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<ICatalog, Catalog>();
 builder.Services.AddScoped<ISendMailService, SendMailService>();
 builder.Services.AddScoped<ICatalogManager, CatalogManager>();
+
+builder.Services.Configure<Mail>(builder.Configuration.GetSection("Mail"));
+builder.Host.UseSerilog((_, conf) => {
+    conf.WriteTo.Console()
+    .WriteTo.File("log_.txt", rollingInterval: RollingInterval.Day);
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -5,6 +5,6 @@ namespace FirstMVCApp.Services
 
     public interface ISendMailService
     {
-        void Send(MailFields mailOptions);
+        void Send(string subject, string body);
     }
 }
