@@ -1,0 +1,84 @@
+2022-07-06 20:52:22.437 +03:00 [INF] User profile is available. Using 'C:\Users\den4i\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-07-06 20:52:22.566 +03:00 [INF] Now listening on: https://localhost:7210
+2022-07-06 20:52:22.568 +03:00 [INF] Now listening on: http://localhost:5210
+2022-07-06 20:52:22.570 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-07-06 20:52:22.571 +03:00 [INF] Hosting environment: Development
+2022-07-06 20:52:22.572 +03:00 [INF] Content root path: D:\C#\MVC\FirstMVCApp\FirstMVCApp\
+2022-07-06 20:52:23.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/ - -
+2022-07-06 20:52:23.536 +03:00 [INF] Executing endpoint 'FirstMVCApp.Controllers.CatalogController.Index (FirstMVCApp)'
+2022-07-06 20:52:23.567 +03:00 [INF] Route matched with {action = "Index", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FirstMVCApp.Controllers.CatalogController (FirstMVCApp).
+2022-07-06 20:52:23.579 +03:00 [INF] Executing ViewResult, running view Index.
+2022-07-06 20:52:23.697 +03:00 [INF] Executed ViewResult - view Index executed in 117.5428ms.
+2022-07-06 20:52:23.702 +03:00 [INF] Executed action FirstMVCApp.Controllers.CatalogController.Index (FirstMVCApp) in 133.0059ms
+2022-07-06 20:52:23.704 +03:00 [INF] Executed endpoint 'FirstMVCApp.Controllers.CatalogController.Index (FirstMVCApp)'
+2022-07-06 20:52:23.730 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/ - - - 200 - text/html;+charset=utf-8 240.5758ms
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/lib/jquery/dist/jquery.min.js - -
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/FirstMVCApp.styles.css?v=qMBgVC7GMOoi7IlxAlZbEtjwMP6away6PHrIalgzZqk - -
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-07-06 20:52:23.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2022-07-06 20:52:23.796 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 4.2233ms
+2022-07-06 20:52:23.815 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2022-07-06 20:52:23.815 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2022-07-06 20:52:23.815 +03:00 [INF] The file /js/site.js was not modified
+2022-07-06 20:52:23.815 +03:00 [INF] The file /FirstMVCApp.styles.css was not modified
+2022-07-06 20:52:23.815 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2022-07-06 20:52:23.815 +03:00 [INF] The file /css/site.css was not modified
+2022-07-06 20:52:23.817 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 24.9444ms
+2022-07-06 20:52:23.817 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 25.8275ms
+2022-07-06 20:52:23.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 27.3316ms
+2022-07-06 20:52:23.821 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/FirstMVCApp.styles.css?v=qMBgVC7GMOoi7IlxAlZbEtjwMP6away6PHrIalgzZqk - - - 304 - text/css 29.0131ms
+2022-07-06 20:52:23.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 30.2230ms
+2022-07-06 20:52:23.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 304 - text/css 31.6651ms
+2022-07-06 20:52:27.341 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/Catalog/ProductOnCreate - -
+2022-07-06 20:52:27.344 +03:00 [INF] Executing endpoint 'FirstMVCApp.Controllers.CatalogController.ProductOnCreate (FirstMVCApp)'
+2022-07-06 20:52:27.347 +03:00 [INF] Route matched with {action = "ProductOnCreate", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductOnCreate() on controller FirstMVCApp.Controllers.CatalogController (FirstMVCApp).
+2022-07-06 20:52:27.350 +03:00 [INF] Executing ViewResult, running view ProductOnCreate.
+2022-07-06 20:52:27.359 +03:00 [INF] Executed ViewResult - view ProductOnCreate executed in 9.6407ms.
+2022-07-06 20:52:27.361 +03:00 [INF] Executed action FirstMVCApp.Controllers.CatalogController.ProductOnCreate (FirstMVCApp) in 11.7269ms
+2022-07-06 20:52:27.362 +03:00 [INF] Executed endpoint 'FirstMVCApp.Controllers.CatalogController.ProductOnCreate (FirstMVCApp)'
+2022-07-06 20:52:27.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/Catalog/ProductOnCreate - - - 200 - text/html;+charset=utf-8 22.6622ms
+2022-07-06 20:52:27.396 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2022-07-06 20:52:27.397 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 1.3203ms
+2022-07-06 20:52:28.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/Catalog/ProductDeletion - -
+2022-07-06 20:52:28.512 +03:00 [INF] Executing endpoint 'FirstMVCApp.Controllers.CatalogController.ProductDeletion (FirstMVCApp)'
+2022-07-06 20:52:28.514 +03:00 [INF] Route matched with {action = "ProductDeletion", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductDeletion() on controller FirstMVCApp.Controllers.CatalogController (FirstMVCApp).
+2022-07-06 20:52:28.517 +03:00 [INF] Executing ViewResult, running view ProductDeletion.
+2022-07-06 20:52:28.522 +03:00 [INF] Executed ViewResult - view ProductDeletion executed in 5.2602ms.
+2022-07-06 20:52:28.523 +03:00 [INF] Executed action FirstMVCApp.Controllers.CatalogController.ProductDeletion (FirstMVCApp) in 7.4062ms
+2022-07-06 20:52:28.524 +03:00 [INF] Executed endpoint 'FirstMVCApp.Controllers.CatalogController.ProductDeletion (FirstMVCApp)'
+2022-07-06 20:52:28.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/Catalog/ProductDeletion - - - 200 - text/html;+charset=utf-8 16.7776ms
+2022-07-06 20:52:28.559 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2022-07-06 20:52:28.561 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 1.8009ms
+2022-07-06 20:52:29.657 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/ - -
+2022-07-06 20:52:29.659 +03:00 [INF] Executing endpoint 'FirstMVCApp.Controllers.CatalogController.Index (FirstMVCApp)'
+2022-07-06 20:52:29.661 +03:00 [INF] Route matched with {action = "Index", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FirstMVCApp.Controllers.CatalogController (FirstMVCApp).
+2022-07-06 20:52:29.663 +03:00 [INF] Executing ViewResult, running view Index.
+2022-07-06 20:52:29.665 +03:00 [INF] Executed ViewResult - view Index executed in 2.2564ms.
+2022-07-06 20:52:29.667 +03:00 [INF] Executed action FirstMVCApp.Controllers.CatalogController.Index (FirstMVCApp) in 3.6914ms
+2022-07-06 20:52:29.668 +03:00 [INF] Executed endpoint 'FirstMVCApp.Controllers.CatalogController.Index (FirstMVCApp)'
+2022-07-06 20:52:29.670 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/ - - - 200 - text/html;+charset=utf-8 12.5616ms
+2022-07-06 20:52:29.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2022-07-06 20:52:29.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 2.0188ms
+2022-07-06 20:52:31.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/Catalog/ProductOnCreate - -
+2022-07-06 20:52:31.115 +03:00 [INF] Executing endpoint 'FirstMVCApp.Controllers.CatalogController.ProductOnCreate (FirstMVCApp)'
+2022-07-06 20:52:31.116 +03:00 [INF] Route matched with {action = "ProductOnCreate", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductOnCreate() on controller FirstMVCApp.Controllers.CatalogController (FirstMVCApp).
+2022-07-06 20:52:31.117 +03:00 [INF] Executing ViewResult, running view ProductOnCreate.
+2022-07-06 20:52:31.119 +03:00 [INF] Executed ViewResult - view ProductOnCreate executed in 2.1062ms.
+2022-07-06 20:52:31.120 +03:00 [INF] Executed action FirstMVCApp.Controllers.CatalogController.ProductOnCreate (FirstMVCApp) in 3.2999ms
+2022-07-06 20:52:31.121 +03:00 [INF] Executed endpoint 'FirstMVCApp.Controllers.CatalogController.ProductOnCreate (FirstMVCApp)'
+2022-07-06 20:52:31.122 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/Catalog/ProductOnCreate - - - 200 - text/html;+charset=utf-8 9.1480ms
+2022-07-06 20:52:31.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2022-07-06 20:52:31.162 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 1.0602ms
+2022-07-06 20:52:32.283 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/Catalog/ProductDeletion - -
+2022-07-06 20:52:32.285 +03:00 [INF] Executing endpoint 'FirstMVCApp.Controllers.CatalogController.ProductDeletion (FirstMVCApp)'
+2022-07-06 20:52:32.287 +03:00 [INF] Route matched with {action = "ProductDeletion", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductDeletion() on controller FirstMVCApp.Controllers.CatalogController (FirstMVCApp).
+2022-07-06 20:52:32.289 +03:00 [INF] Executing ViewResult, running view ProductDeletion.
+2022-07-06 20:52:32.291 +03:00 [INF] Executed ViewResult - view ProductDeletion executed in 2.1437ms.
+2022-07-06 20:52:32.293 +03:00 [INF] Executed action FirstMVCApp.Controllers.CatalogController.ProductDeletion (FirstMVCApp) in 3.7139ms
+2022-07-06 20:52:32.293 +03:00 [INF] Executed endpoint 'FirstMVCApp.Controllers.CatalogController.ProductDeletion (FirstMVCApp)'
+2022-07-06 20:52:32.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/Catalog/ProductDeletion - - - 200 - text/html;+charset=utf-8 11.7368ms
+2022-07-06 20:52:32.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2022-07-06 20:52:32.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 11980 application/javascript;+charset=utf-8 2.0813ms
